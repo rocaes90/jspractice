@@ -2,7 +2,7 @@
 const adminLoginService = (user) => console.log(`admin login service with ${user.credentials.id}/${user.credentials.pass}`) 
 const studentLoginService = (user) => console.log(`student login service with ${user.credentials.id}/${user.credentials.pass}`) 
 
-// test case
+// mock users
 const adminUser = {
   name: 'Carlos',
   role: 'ADMIN',
@@ -22,6 +22,7 @@ const studentUser = {
   }
 }
 
+// regular implementation
 function adminLogin(user) {
   if (user.token) {
     console.log(`valid token for ${user.name}`)
@@ -49,10 +50,7 @@ function studentLogin(user) {
 adminLogin(adminUser)
 studentLogin(studentUser)
 
-console.log(' ')
-console.log('-------------------------------------------------')
-console.log(' ')
-
+// HOF implementation
 const validate = (user) => {
   (user.token) && console.log(`valid token for ${user.name}`)
   return user.token
