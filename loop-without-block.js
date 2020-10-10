@@ -12,7 +12,6 @@ function forSum(numbers) {
   return total;
 }
 
-
 const syncSum = (numbers) => numbers.reduce((initialValue, currentValue) => initialValue + currentValue)
 
 const asyncSum = async(numbers) => numbers.reduce((initialValue, currentValue) => initialValue + currentValue)
@@ -46,6 +45,3 @@ setTimeout(
 evaluateArray(asyncSum).then((value) => console.log('asyncSum #1', value))
 
 console.log('checkPoint #2 !!!')
-
-
-
