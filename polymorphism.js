@@ -21,4 +21,4 @@ class Queen extends Character {
 }
 
 const victoria = new Queen('Victoria', 'army', 'hearts');
-victoria.attack()
+victoria.attack() 

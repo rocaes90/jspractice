@@ -77,3 +77,10 @@ const studentLoginHOF = login(studentLoginService)
 
 adminLoginHOF(adminUser)
 studentLoginHOF(studentUser)
+
+// example
+const hof1 = ()  => () => 5
+hof1()()
+
+const hof2 = (fn) => fn(5)
+hof1((x) => x)
